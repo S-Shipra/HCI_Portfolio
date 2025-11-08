@@ -49,12 +49,15 @@
   },
   "devDependencies": {
     "@types/node": "^20.10.0",
-    "@vitejs/plugin-react-swc": "^3.10.2"
+    "@vitejs/plugin-react-swc": "^3.10.2",
+    "gh-pages": "^6.3.0"
   },
   "scripts": {
     "dev": "vite",
     "build": "npx vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "engines": {
     "node": ">=22.0.0"
